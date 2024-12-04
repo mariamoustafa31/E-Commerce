@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import logo from './logo.svg';
 import './App.css';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, HashRouter, RouterProvider } from 'react-router-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout/Layout.jsx';
 import Home from './components/Home/Home';
@@ -34,7 +34,7 @@ import Details from './components/Details/Details';
 // ])
 function App() {
   return ( <>
-   <BrowserRouter>
+   <HashRouter>
    <Navbar/>
    <Routes>
    <Route  path="/" element={<Signup />}/>
@@ -49,7 +49,7 @@ function App() {
    <Route  path="/notfound" element={<Notfound />}/>
    
    </Routes>
-   </BrowserRouter>
+   </HashRouter>
   {/* <RouterProvider router={router}>
 
   </RouterProvider> */}
